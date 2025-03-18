@@ -1,0 +1,117 @@
+{
+    "SERUM": {
+        "Total Samples": 202,
+        "Breakdown": {
+            "football": {
+                "Total": 44,
+                "T1": 42,
+                "T2": 2,
+                "T3": 0
+            },
+            "ultrarunning": {
+                "Total": 57,
+                "T1": 40,
+                "T2": 17,
+                "T3": 0
+            },
+            "sedentary": {
+                "Total": 101,
+                "T1": 43,
+                "T2": 33,
+                "T3": 25
+            }
+        }
+    },
+    "PLASMA": {
+        "Total Samples": 211,
+        "Breakdown": {
+            "football": {
+                "Total": 48,
+                "T1": 45,
+                "T2": 3,
+                "T3": 0
+            },
+            "ultrarunning": {
+                "Total": 55,
+                "T1": 38,
+                "T2": 17,
+                "T3": 0
+            },
+            "sedentary": {
+                "Total": 108,
+                "T1": 46,
+                "T2": 36,
+                "T3": 26
+            }
+        }
+    },
+    "CAPILAR": {
+        "Total Samples": 197,
+        "Breakdown": {
+            "football": {
+                "Total": 43,
+                "T1": 40,
+                "T2": 3,
+                "T3": 0
+            },
+            "ultrarunning": {
+                "Total": 56,
+                "T1": 39,
+                "T2": 17,
+                "T3": 0
+            },
+            "sedentary": {
+                "Total": 98,
+                "T1": 37,
+                "T2": 35,
+                "T3": 26
+            }
+        }
+    },
+    "URINE": {
+        "Total Samples": 199,
+        "Breakdown": {
+            "football": {
+                "Total": 36,
+                "T1": 36,
+                "T2": 0,
+                "T3": 0
+            },
+            "ultrarunning": {
+                "Total": 58,
+                "T1": 43,
+                "T2": 15,
+                "T3": 0
+            },
+            "sedentary": {
+                "Total": 105,
+                "T1": 39,
+                "T2": 36,
+                "T3": 30
+            }
+        }
+    },
+    "SALIVA": {
+        "Total Samples": 226,
+        "Breakdown": {
+            "football": {
+                "Total": 55,
+                "T1": 47,
+                "T2": 8,
+                "T3": 0
+            },
+            "ultrarunning": {
+                "Total": 59,
+                "T1": 40,
+                "T2": 19,
+                "T3": 0
+            },
+            "sedentary": {
+                "Total": 112,
+                "T1": 45,
+                "T2": 37,
+                "T3": 30
+            }
+        }
+    }
+}
