@@ -12,8 +12,8 @@ geral_data = pd.read_excel(file_path)
 start_col = next(col for col in geral_data.columns if str(col).startswith("3050"))
 start_col_index = geral_data.columns.get_loc(start_col)
 
-metadata = geral_data.iloc[:, :start_col_index]  # Metadata columns
-spectral_data = geral_data.iloc[:, start_col_index:]  # Spectral columns (intensities)
+metadata = geral_data.iloc[:, :start_col_index]
+spectral_data = geral_data.iloc[:, start_col_index:]
 
 # Step 2: Set up output directories
 # Create necessary directories
