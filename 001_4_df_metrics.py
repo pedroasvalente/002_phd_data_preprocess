@@ -8,7 +8,7 @@ cleaned_data = pd.read_csv(file_path)
 # Standardize column values (without changing case for sample_type)
 cleaned_data['sample_type'] = cleaned_data['sample_type'].str.strip()
 cleaned_data['group_fam'] = cleaned_data['group_fam'].str.strip().str.lower()
-cleaned_data['timepoint'] = cleaned_data['timepoint'].str.strip().str.upper()
+cleaned_data['timepoint'] = cleaned_data['timepoint'].astype (int)
 
 # Define sample types and categories
 sample_types = ['SERUM', 'PLASMA', 'CAPILAR', 'URINE', 'SALIVA']
@@ -24,9 +24,9 @@ def count_samples(df, sample_type):
         category_df = sample_df[sample_df['group_fam'] == category]
         category_counts[category] = {
             'Total': len(category_df),
-            'T1': len(category_df[category_df['timepoint'] == 'T1']),
-            'T2': len(category_df[category_df['timepoint'] == 'T2']),
-            'T3': len(category_df[category_df['timepoint'] == 'T3']) if 'T3' in df['timepoint'].unique() else 0
+            '1': len(category_df[category_df['timepoint'] == 1]),
+            '2': len(category_df[category_df['timepoint'] == 2]),
+            '3': len(category_df[category_df['timepoint'] == 3]) if 3 in df['timepoint'].unique() else 0
         }
 
     return total_samples, category_counts
