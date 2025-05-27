@@ -49,4 +49,4 @@ The resulting cleaned dataset is suitable for:
 	•	Dimensionality reduction (e.g., PLS-DA, PCA)
 	•	Biomarker discovery in exercise physiology
 
- Important: This repository is not intended for public reuse or active development. It accompanies the manuscript entitled ”FTIR-Based Digital Fingerprint Enables Discrimination Between Sedentary Individuals and Ultrarunning and Football Athletes via Supervised Machine Learning – the development of a biochemical digital fingerprint” as supplementary material.
+Important: This repository is not intended for public reuse or active development. It accompanies the manuscript entitled ”FTIR-Based Digital Fingerprint Enables Discrimination Between Sedentary Individuals and Ultrarunning and Football Athletes via Supervised Machine Learning – the development of a biochemical digital fingerprint” as supplementary material.
