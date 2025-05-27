@@ -13,7 +13,7 @@ def euclidean_normalization(spectrum):
     return spectrum / euclidean_length if euclidean_length != 0 else spectrum
 
 # Step 1: Load the Excel file
-file_path = '/Users/pedroasvalente/Library/CloudStorage/OneDrive-UniversidadedeCoimbra/02_WORK/05_DATA/001_phd_data_organization/002_5_all_meta.xlsx'  # Update the path to your file
+file_path = '000_all_meta.xlsx'  # Update the path to your file
 geral_data = pd.read_excel(file_path)
 
 # Find the first column that starts with "3050"
