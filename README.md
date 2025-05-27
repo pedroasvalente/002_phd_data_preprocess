@@ -39,4 +39,3 @@ Output: 001_5_metrics.json (summary statistics).
 How to Use
 Run the scripts in sequence (001_0 → 001_2 → 001_4).
 Use 001_3_cleaned_FTIR.csv as the final cleaned dataset.
-Check 001_5_metrics.json for sample distribution details.
