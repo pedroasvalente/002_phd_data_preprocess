@@ -1,41 +1,52 @@
-README: FTIR Spectral Data Processing Pipeline
-------
-Overview
-This folder contains the scripts and data files for processing FTIR spectral data, including baseline correction, normalization, outlier detection, and dataset analysis. The pipeline ensures data quality and prepares it for further scientific analysis.
--------
-Folder Contents
-1️⃣ Scripts (Processing Steps)
-Filename	Description
-001_0_baseline_correction_normalization.py	Performs baseline correction and normalization on raw spectral data.
-001_2_outliers_detection.py	Identifies and removes outlier spectra using the Z-score method.
-001_4_df_metrics.py	Analyzes the cleaned dataset, summarizing sample counts by type, category, and timepoint.
-------
-2️⃣ Data Files
-Filename	Description
-001_1_normalized_spectra.xlsx	Normalized spectral data after baseline correction.
-001_3_cleaned_FTIR.csv	Cleaned dataset after outlier detection (main dataset for further analysis).
-001_5_metrics.json	JSON file summarizing sample counts by type, category, and timepoint.
-------------##--------------
-Pipeline Workflow
-------------##--------------
+FTIR Spectral Preprocessing Pipeline
 
---
+This repository provides the complete preprocessing pipeline for Fourier Transform Infrared (FTIR) spectra derived from multiple human biofluids, collected across distinct physical activity profiles. It was developed to support a scientific study aiming to explore biochemical signatures of exercise using infrared spectroscopy.
 
-1️⃣ Baseline Correction & Normalization
-Run 001_0_baseline_correction_normalization.py to process raw FTIR data.
-Output: 001_1_normalized_spectra.xlsx
+🧪 Scientific Context
 
---
+The project investigates whether FTIR spectroscopy can differentiate individuals based on physical activity levels — including football players, ultramarathon runners, and sedentary individuals — using spectral data from biofluids such as serum, plasma, capillary blood, saliva, and urine. This repository contains the reproducible code and intermediate data products referenced in the associated manuscript.
 
-2️⃣ Outlier Detection
-Run 001_2_outliers_detection.py to remove outlier spectra.
-Output: 001_3_cleaned_FTIR.csv
+📂 Repository Contents
+.
+├── 000_all_meta.xlsx                  # Raw metadata: participant IDs, sample types, group classifications
+├── 001_0_baseline_correction_normalization.py  # Script for baseline correction and vector normalization
+├── 001_1_normalized_spectra.xlsx      # Output of normalized spectra
+├── 001_2_outliers_detection.py        # PCA-based outlier detection and removal
+├── 001_3_cleaned_FTIR.csv             # Final cleaned dataset for statistical and ML analyses
+├── 001_4_df_metrics.py                # Script to compute group/sample metrics
+├── 001_5_metrics.json                 # Summary statistics per group and biofluid
+├── README.md                          # This documentation file
 
---
+🧬 Data Summary
+	•	Total samples: Multiple hundreds across five biofluids
+	•	Sample classes: Football, ultrarunning, sedentary
+	•	Timepoints: Baseline and post-intervention (if applicable)
+	•	Target variables: Group classification, timepoint, VO2max class, body fat class
 
-3️⃣ Dataset Analysis
-Run 001_4_df_metrics.py to analyze the cleaned dataset.
-Output: 001_5_metrics.json (summary statistics).
-How to Use
-Run the scripts in sequence (001_0 → 001_2 → 001_4).
-Use 001_3_cleaned_FTIR.csv as the final cleaned dataset.
+🔬 Preprocessing Pipeline
+
+1. Baseline Correction & Normalization
+	•	Spectra undergo baseline correction to remove background absorption.
+	•	Vector normalization standardizes intensity variation between samples.
+
+2. Outlier Detection
+	•	Principal Component Analysis (PCA) is used to identify spectral outliers.
+	•	Outliers are excluded from downstream analyses to improve data robustness.
+
+3. Metadata Integration
+	•	Metadata from 000_all_meta.xlsx is merged with cleaned spectral data.
+	•	Final dataset (001_3_cleaned_FTIR.csv) is structured for supervised learning.
+
+4. Summary Metrics
+	•	The script 001_4_df_metrics.py compiles sample distributions and class frequencies.
+	•	Results are saved to 001_5_metrics.json, used to validate sample balance across conditions.
+
+📊 Applications
+
+The resulting cleaned dataset is suitable for:
+	•	Supervised classification (e.g., group, fitness class prediction)
+	•	Exploratory spectral analysis
+	•	Dimensionality reduction (e.g., PLS-DA, PCA)
+	•	Biomarker discovery in exercise physiology
+
+ Important: This repository is not intended for public reuse or active development. It accompanies the manuscript entitled ”FTIR-Based Digital Fingerprint Enables Discrimination Between Sedentary Individuals and Ultrarunning and Football Athletes via Supervised Machine Learning – the development of a biochemical digital fingerprint” as supplementary material.
